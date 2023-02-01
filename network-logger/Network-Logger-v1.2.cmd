@@ -2,9 +2,9 @@
 cls
 :: call "c:\Windows\media\Windows Logon.wav"
 Title = "Network-Logger-v1.2" 
-set /p ipAdress=Enter IP Address you want to ping: 
-set /p fileName=Enter filename: 
-Title = "Network-Logger-v1.2" %fileName% 
+set /p ipAdress="Enter IP Address you want to ping: "
+set /p fileName="Name logfile for %ipAdress%: "
+Title = "Network-Logger-v1.2" Pinging: %ipAdress% 
 echo --------Pinging started at---------
 time/t
 color 2
@@ -18,7 +18,7 @@ if errorlevel 1 (
 :: c:\Windows\media\ding.wav
 color 4
 echo.
-echo ------------OFFLINE------------
+echo ------------OFFLINE * Down------------
 time/t
 echo TIME OF DISCONNECTION >> %fileName%.txt
 time/t >> %fileName%.txt
@@ -33,7 +33,7 @@ time/t
 :: c:\Windows\media\tada.wav
 color 2
 echo.
-echo ------------Now Online again------------
+echo ------------Now Online again * Up------------
 time/t
 echo NOW ONLINE >> %fileName%.txt
 time/t >> %fileName%.txt
@@ -45,7 +45,7 @@ GOTO NOTONLINE
 
 ) else (
 echo.
-echo ------------Now Online------------
+echo ------------Now Online * Up------------
 time/t
 
 )
