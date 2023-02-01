@@ -10,6 +10,7 @@ changes as of January 31, 2022
 - .bat => .cmd 
 - able to input specific IP Address for Continuous ping 
 - able to input filename for classification 
+- network-logger => network-monitor
 
 @CNorse https://github.com/CNorse/script-bat-projectfile
 
