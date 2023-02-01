@@ -4,7 +4,7 @@ cls
 Title = "Network-Logger-v1.2" 
 set /p ipAdress="Enter IP Address you want to ping: "
 set /p fileName="Name logfile for %ipAdress%: "
-Title = "Network-Logger-v1.2" Pinging: %ipAdress% 
+Title = Pinging: %ipAdress% "Network-Logger-v1.2"
 echo --------Pinging started at---------
 time/t
 color 2
